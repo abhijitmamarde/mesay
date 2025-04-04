@@ -40,3 +40,15 @@ uvx --python 3.11 git+https://github.com/abhijitmamarde/mesay@ae3bf9c
 # specify the release tag - rel0.1.0
 uvx --python 3.11 git+https://github.com/abhijitmamarde/mesay@rel_0.1.0
 ```
+
+
+# Bump Version
+
+0.0.X -> 0.0.X+1
+uv run bump2version patch
+
+0.X.0 -> 0.X+1.0
+uv run bump2version minor
+
+X.0.0 -> X+1.0.0
+uv run bump2version major
