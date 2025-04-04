@@ -1,6 +1,8 @@
 import sys
 import textwrap
 
+valid_choices = ['stegosaurus', 'dragon', 'cat', 'cat2']
+
 def cowsay(message, cow_type="default", width=40):
     """
     Simulates the cowsay command.
@@ -40,7 +42,7 @@ def get_cow(cow_type):
                 ||     ||
     """
 
-    if (not cow_type) or (cow_type.lower() not in ['stegosaurus', 'dragon']):
+    if (not cow_type) or (cow_type.lower() not in valid_choices):
         cow_type == "default"
 
     if cow_type == "default":
@@ -57,10 +59,25 @@ def get_cow(cow_type):
     elif cow_type == "dragon":
       cow = r"""
        \   /\_/\
-        \  (o o)
-          > == <
-         /  --  \
-        /________\
+        \  (0 0)
+           > == <
+          /  --  \
+         /________\
+        """
+    elif cow_type == "cat":
+        cow = r"""
+        \   /\_/\
+         \ ( o.o )
+            > ^ <
+        """
+    elif cow_type == "cat2":
+        cow = r"""
+        \    /\_/\
+         \  ( o.o )
+          \  > ^ <
+             /   \  ?
+            |     |/
+            \__|__/
         """
 
     return cow
@@ -70,7 +87,7 @@ def main():
 
     parser = argparse.ArgumentParser(description="A Python cowsay implementation.")
     parser.add_argument("message", nargs="*", default=["Moo!"], help="The message to display.")
-    parser.add_argument("-t", "--type", choices=["default", "stegosaurus", "dragon"], default="default", help="The type of cow to display.")
+    parser.add_argument("-t", "--type", choices=valid_choices, default="default", help="The type of cow to display.")
     parser.add_argument("-w", "--width", type=int, default=40, help="The maximum width of the message bubble.")
 
     args = parser.parse_args()
