@@ -1,10 +1,12 @@
 [project]
 name = "mesay"
-version = "0.1.0"
+version = "0.2.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.7"
-dependencies = []
+dependencies = [
+    "bump2version>=1.0.1",
+]
 
 [project.scripts]
 mesay = "mesay.mesay:main" # Replace "mesay" with the name you want for the executable
