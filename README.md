@@ -42,3 +42,14 @@ uvx --python 3.11 git+https://github.com/abhijitmamarde/mesay@rel_0.1.0
 ```
 
 Test commit to main!
+
+# Bump Version
+
+0.0.X -> 0.0.X+1
+uv run bump2version patch
+
+0.X.0 -> 0.X+1.0
+uv run bump2version minor
+
+X.0.0 -> X+1.0.0
+uv run bump2version major
