@@ -28,6 +28,7 @@ def cowsay(message, cow_type="default", width=40):
     cow = get_cow(cow_type)
 
     print(bubble + cow)
+    print(f"Python version used: {sys.version}")
 
 def get_cow(cow_type):
     default = r"""
