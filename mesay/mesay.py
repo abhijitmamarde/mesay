@@ -29,6 +29,7 @@ def cowsay(message, cow_type="default", width=40):
 
     print(bubble + cow)
     print(f"Python version used: {sys.version}")
+    print("This is DEV branch!!!")
 
 def get_cow(cow_type):
     default = r"""
