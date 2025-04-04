@@ -40,3 +40,5 @@ uvx --python 3.11 git+https://github.com/abhijitmamarde/mesay@ae3bf9c
 # specify the release tag - rel0.1.0
 uvx --python 3.11 git+https://github.com/abhijitmamarde/mesay@rel_0.1.0
 ```
+
+Test commit to main!
