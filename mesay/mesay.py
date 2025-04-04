@@ -63,7 +63,7 @@ def get_cow(cow_type):
 
     return cow
 
-if __name__ == "__main__":
+def main():
     import argparse
 
     parser = argparse.ArgumentParser(description="A Python cowsay implementation.")
@@ -76,3 +76,6 @@ if __name__ == "__main__":
     message = " ".join(args.message)
 
     cowsay(message, args.type, args.width)
+
+if __name__ == "__main__":
+    main()
