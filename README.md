@@ -44,11 +44,24 @@ uvx --python 3.11 git+https://github.com/abhijitmamarde/mesay@rel_0.1.0
 
 # Bump Version
 
-0.0.X -> 0.0.X+1
+```bash
+# patch: 0.0.X -> 0.0.X+1
 uv run bump2version patch
 
-0.X.0 -> 0.X+1.0
+# minor: 0.X.0 -> 0.X+1.0
 uv run bump2version minor
 
-X.0.0 -> X+1.0.0
+# major: X.0.0 -> X+1.0.0
 uv run bump2version major
+```
+
+- only advised to run from master/main branch
+- if there is any specific release branch, do it from there, and then merge the release to main branch
+- never advised to do from feature/dev branch
+- if there is CI/CD pipeline setup, do this release bump from there
+
+for pushing create tag, use command:
+
+```bash
+git push --tag
+```
